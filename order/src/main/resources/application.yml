@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: order-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/order-service
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+    properties:
+      jakarta:
+        persistence:
+          sharedCache:
+            mode: UNSPECIFIED
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka:password@localhost:8761/eureka/
+server:
+  port: 8081
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+resilience4j:
+  retry:
+    instances:
+      inventory:
+        max-attempts: 3
+        wait-duration: 5s
+  timelimiter:
+    instances:
+      inventory:
+        timeoutDuration: 3s
+  circuitbreaker:
+    instances:
+      inventory:
+        registerHealthIndicator: true
+        event-consumer-buffer-size: 10
+        sliding-window-type: COUNT_BASED
+        slidingWindowSize: 5
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
