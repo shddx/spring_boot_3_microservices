@@ -150,7 +150,7 @@
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-tooling-core/1.7.22/19c84dd609449479dd647cfb8b885f6430501a21/kotlin-tooling-core-1.7.22.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.7.22/703a4d56168f3517532bc04481e3c8b751f685cb/kotlin-script-runtime-1.7.22.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-util-io/1.7.22/c7c029364a8ec73bca0721095e03496acf25da50/kotlin-util-io-1.7.22.jar</arg>
-                <arg>$KOTLIN_BUNDLED$/lib/allopen-compiler-plugin.jar</arg>
+                <arg>$USER_HOME$/AppData/Local/JetBrains/IntelliJIdea2022.3/kotlin-dist-for-ide/1.7.22/lib/allopen-compiler-plugin.jar</arg>
               </args>
             </arrayArg>
             <arrayArg name="pluginOptions">

@@ -59,3 +59,7 @@ resilience4j:
         wait-duration-in-open-state: 5s
         permittedNumberOfCallsInHalfOpenState: 3
         automaticTransitionFromOpenToHalfOpenEnabled: true
+
+integration:
+  inventory:
+    uri: http://inventory-service/api/inventory
