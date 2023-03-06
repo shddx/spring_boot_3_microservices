@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="17" />
+    <bytecodeTargetLevel>
+      <module name="api-gateway" target="17" />
+      <module name="api-gateway.main" target="17" />
+      <module name="api-gateway.test" target="17" />
+      <module name="discovery-service" target="17" />
+      <module name="discovery-service.main" target="17" />
+      <module name="discovery-service.test" target="17" />
+      <module name="inventory-service" target="17" />
+      <module name="inventory-service.main" target="17" />
+      <module name="inventory-service.test" target="17" />
+      <module name="order" target="17" />
+      <module name="order.main" target="17" />
+      <module name="order.test" target="17" />
+      <module name="product" target="17" />
+      <module name="product.main" target="17" />
+      <module name="product.test" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
