@@ -1,6 +1,7 @@
 package com.shddx.order
 
 import org.springframework.http.MediaType
+import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.service.annotation.HttpExchange
 import org.springframework.web.service.annotation.PostExchange
 
@@ -9,5 +10,5 @@ import org.springframework.web.service.annotation.PostExchange
 )
 internal interface InventoryClient {
     @PostExchange
-    fun checkInventory(inventoryRequest: OrderService.InventoryRequest): Array<OrderService.InventoryResponse>
+    fun checkInventory(@RequestBody inventoryRequest: OrderService.InventoryRequest): Array<OrderService.InventoryResponse>
 }
